@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Full NYS Design System CSS -->
+    <link rel="stylesheet" href="/node_modules/@nysds/styles/dist/nysds-full.min.css" />
+    <!-- NYS Agency Theme-->
+     <link rel="stylesheet" href="/node_modules/@nysds/styles/dist/nysds-theme-safety.min.css" />
+    <title>Step 3: Background | NYSP Application</title>
+  </head>
+  <body>
+    <nys-skipnav id="nys-skipnav" href="#app"></nys-skipnav>
+    <div id="app">
+        <!---NYS UNav Header-->
+        <nys-unavheader hideTranslate hideSearch></nys-unavheader>
+        <!--NYS Global Header-->
+        <nys-globalheader appName="Join the State Police"></nys-globalheader>
+        <div class="nys-grid-row">
+            <nys-stepper
+                label="NYSP Trooper Application"
+                class="nys-desktop:nys-grid-col-2"
+            >
+                <nys-step
+                href="qualification.html"
+                label="Qualification"
+                ></nys-step>
+                <nys-step
+                href="personal-information.html"
+                label="Personal Information"
+                ></nys-step>
+                <nys-step
+                href="background.html"
+                label="Background"
+                current
+                ></nys-step>
+                <nys-step
+                href="military-background.html"
+                label="Military Background"
+                ></nys-step>
+                <nys-step
+                href="review-and-affirmation.html"
+                label="Review and Affirmation"
+                ></nys-step>
+            </nys-stepper>
+            <div class="nys-desktop:nys-grid-col-10" id="nys-stepper-content">
+                <div class="nys-padding-x-200">
+                <h2>Background</h2>
+                </div>
+                <div class="nys-padding-x-200">
+                    <nys-divider></nys-divider>
+                </div>
+                <div class="nys-padding-x-200">
+                    <h3>Ethnic Background</h3>
+                </div>
+                <div class="nys-padding-200">
+                <!-- Add <nys-option> elements as needed-->
+                    <nys-select
+                    width="md"
+                    label="Ethnicity"
+                    description="Using the drop-down menu, select that which is closest to your ethnic background."
+                    optional
+                    name="ethnicity"
+                    >
+                        <nys-option value=""></nys-option>
+                    </nys-select>
+                </div>
+                <div class="nys-padding-200">
+                <!-- Add <nys-option> elements as needed-->
+                    <nys-select
+                    width="md"
+                    label="Race"
+                    description="Using the drop-down menu, select that which is closest to your race."
+                    optional
+                    name="race"
+                    >
+                        <nys-option value=""></nys-option>
+                </div>
+                <div class="nys-padding-200">
+                <!-- Add <nys-option> elements as needed-->
+                    <nys-select
+                    width="sm"
+                    label="Gender"
+                    description="Indicate your gender."
+                    required
+                    name="gender"
+                    >
+                        <nys-option value=""></nys-option>
+                </div>
+                <div class="nys-padding-x-200">
+                    <nys-divider></nys-divider>
+                </div>
+                <div class="nys-padding-x-200">
+                    <h3>Prior NYSP Application</h3>
+                </div>
+                <div class="nys-padding-200">
+                    <!--
+                    - Use the same 'name' attribute make radio buttons mutually exclusive
+                    - Update 'value' attribute to change data submitted to forms
+                    -->
+                    <nys-radiogroup
+                    label="Have you ever applied for any position with the New York State Police?"
+                    description="Indicate whether you have ever applied for a position with the New York State Police by choosing one of the four options."
+                    size="md"
+                    required
+                    name="applied"
+                    >
+                    <nys-radiobutton
+                    label="No"
+                    value="No"
+                    name="applied"
+                    ></nys-radiobutton>
+                    <nys-radiobutton
+                    label="Yes, Trooper"
+                    value="Yes - Trooper"
+                    name="applied"
+                    ></nys-radiobutton>
+                    <nys-radiobutton
+                    label="Yes, Other"
+                    value="Yes - Other"
+                    name="applied"
+                    ></nys-radiobutton>
+                    <nys-radiobutton
+                    label="Yes, Trooper and Other"
+                    value="Yes - Trooper and Other"
+                    name="applied"
+                    ></nys-radiobutton>
+                    </nys-radiogroup>
+                </div>
+                <div class="nys-padding-x-200">
+                    <nys-divider></nys-divider>
+                </div>
+                <div class="nys-padding-x-200">
+                    <h3>Place of Birth</h3>
+                </div>
+                <div class="nys-padding-200">
+                <!-- Add <nys-option> elements as needed-->
+                    <nys-select
+                    label="What country were you born in?"
+                    width="lg"
+                    description="Choose the country of your birth from the drop-down menu."
+                    required
+                    name="countryborn"
+                    >
+                    <nys-option
+                    selected
+                    value="United States of America"
+                    >
+                    United States of America
+                    </nys-option>
+                </div>
+                <div class="nys-padding-x-200">
+                    <nys-divider></nys-divider>
+                </div>
+                <div class="nys-padding-x-200">
+                    <h3>Police Training</h3>
+                </div>
+                   <div class="nys-padding-200">
+                    <!--
+                    - Use the same 'name' attribute make radio buttons mutually exclusive
+                    - Update 'value' attribute to change data submitted to forms
+                    -->
+                    <nys-radiogroup
+                    label="Have you completed a Certified Basic Police Officer Training Course?"
+                    description="Indicate whether you have completed a New York State Certified Basic Police Officer Training Course (meaning you completed another police officer training academy) in New York State. Peace Officer and/or Corrections Training does not apply."
+                    size="md"
+                    required
+                    name="basictraining"
+                    >
+                    <nys-radiobutton
+                    label="Yes"
+                    value="Yes"
+                    name="basictraining"
+                    ></nys-radiobutton>
+                    <nys-radiobutton
+                    label="No"
+                    value="No"
+                    name="basictraining"
+                    ></nys-radiobutton>
+                    </nys-radiogroup>
+                    <p><strong>Note:</strong> Applicants who have completed the Certified Basic Police Officer Training Course may have 30 of the 60 college credits requirement waived.</p>
+                </div>
+                <nys-divider></nys-divider>
+                <div class="nys-padding-x-200">
+                <h3>Recruitment Source</h3>
+                </div>
+                <div class="nys-padding-200">
+                    <!--Add <nys-option> elements as needed-->
+                   <nys-select
+                    label="How did you first learn about this NYSP employment opportunity?"
+                    description="Using the drop-down menu, select a definition that best describes how or where you first learned about employment opportunities with the New York State Police. If you select either other or NYSP Family/Friend you will be required to provide additional information."
+                    required
+                    name="firstlearn"
+                    >
+                        <nys-option value="-- Choose One --">
+                        -- Choose One --
+                        </nys-option>
+                    </nys-select>
+                </div>
+                
+                <div class="nys-padding-200">
+                <div class="nys-desktop:nys-grid-col-8 nys-padding-l-1200">
+                    <nys-button
+                    label="Continue"
+                    href="military-background.html"
+                    fullWidth size="md"
+                    ariaDescription="Continue"
+                    ></nys-button>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+        <!--NYS Global Footer-->
+        <nys-globalfooter agencyName="Join the State Police"></nys-globalfooter>
+        <!-- NYS UNav Footer-->
+         <nys-unavfooter></nys-unavfooter>
+
+    </div>
+   <!-- NYS Design System Javascript library -->
+    <script src="/node_modules/@nysds/components/dist/nysds.js"></script>
+  </body>
+</html>
