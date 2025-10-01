@@ -19,8 +19,8 @@
         <nys-globalheader appName="Join the State Police"></nys-globalheader>
         <div class="nys-grid-row">
             <nys-stepper
-                label="Register for Design System Office Hours"
-                class="nys-desktop:nys-grid-col-4"
+                label="NYSP Trooper Application"
+                class="nys-desktop:nys-grid-col-2"
             >
                 <nys-step
                 href="qualification.html"
@@ -29,7 +29,6 @@
                 <nys-step
                 href="personal-information.html"
                 label="Personal Information"
-                selected
                 current
                 ></nys-step>
                 <nys-step
@@ -45,12 +44,254 @@
                 label="Review and Affirmation"
                 ></nys-step>
             </nys-stepper>
-            <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content">
-                <div class="nys-padding-200">
+            <div class="nys-desktop:nys-grid-col-10" id="nys-stepper-content">
+                <div class="nys-padding-x-200">
                 <h2>Personal Information</h2>
-                <nys-textinput label="Social Security Number" type="number" required width="md"></nys-textinput>
-                <div class="nys-padding-y-200"></div>
-                <nys-textinput label="Re-enter Social Security Number" type="number" required width="md"></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                <nys-textinput
+                    width="md"
+                    pattern="^((?!219-09-9999|078-05-1120)(?!666|000|9\d{2})\d{3}-(?!00)\d{2}-(?!0{4})\d{4})|((?!219 09 9999|078 05 1120)(?!666|000|9\d{2})\d{3} (?!00)\d{2} (?!0{4})\d{4})|((?!219099999|078051120)(?!666|000|9\d{2})\d{3}(?!00)\d{2}(?!0{4})\d{4})$"
+                    label="Social Security Number"
+                    required
+                    description="Enter your social security number: 3 digits-2 digits-4 digits."
+                    name="ssn"
+                ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="md"
+                    label="Re-enter Social Security Number"
+                    required
+                    description="Re-enter your social security number, as defined above."
+                    name="reenterssn"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="First Name"
+                    required
+                    description="Enter your first name."
+                    name="firstname"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="Middle Name"
+                    optional
+                    description="If applicable, enter your full middle name. Do not enter only an initial."
+                    name="mname"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="Last Name"
+                    required
+                    description="Enter your last name. For hyphenated names, enter the hyphen between the names."
+                    name="lname"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="sm"
+                    label="Suffix"
+                    optional
+                    description="If applicable, enter your suffix, such as Jr. or III."
+                    name="suffix"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="E-mail"
+                    type="email"
+                    required
+                    description="Enter your E-mail address."
+                    name="email"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="Re-enter E-mail"
+                    type="email"
+                    required
+                    description="Re-enter your E-mail address, as defined above."
+                    name="reenteremail"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-x-200">
+                    <p>
+                    <strong>Note:</strong> E-mail will be the primary means of communication. It is your responsibility to provide an accurate email. 
+                    </p>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                        width="md"
+                        label="Home Phone"
+                        type="tel"
+                        optional
+                        description="Enter the area code and number for your home phone."
+                        name="homephone"
+                        ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="md"
+                    label="Work Phone"
+                    type="tel"
+                    optional
+                    description="Enter the area code and number for your work phone."
+                    name="workphone"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="md"
+                    label="Cell Phone"
+                    type="tel"
+                    required
+                    description="Enter the area code and number for your cell phone."
+                    name="cellphone"
+                    ></nys-textinput>
+                </div>
+                <nys-divider></nys-divider>
+                <div class="nys-padding-x-200">
+                <h3>Address Information</h3>
+                </div>
+                <div class="nys-padding-200">
+                    <!--Add <nys-option> elements as needed-->
+                    <nys-select
+                    width="lg"
+                    label="Country"
+                    description="Select the country in which you reside from the drop-down menu."
+                    required
+                    name="country"
+                    >
+                    <nys-option
+                    selected
+                    value="United States of America"
+                    >
+                    United States of America
+                    </nys-option>
+                    </nys-select>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="Permanent Address"
+                    required
+                    description="Enter the number and name of the street at which you receive your mail. Leave a space between the number and the name."
+                    name="permaddress"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="sm"
+                    label="Apartment Number"
+                    optional
+                    description="If you live in an apartment, enter the apartment number."
+                    name="aptnumber"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="City/Town/Village"
+                    required
+                    description="Enter the name of the city, town or village in which you live."
+                    name="citytownvillage"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <!--Add <nys-option> elements as needed-->
+                    <nys-select
+                    width="lg"
+                    label="State/Territory"
+                    description="If you live in the United States: Choose the state or territory in which you reside from the drop-down menu (territories are at the bottom of the list)."
+                    required
+                    name="stateterritory"
+                    >
+                    <nys-option selected value="New York">
+                    New York
+                    </nys-option>
+                    </nys-select>
+                </div>
+                <div class="nys-padding-200">
+                    <!--Add <nys-option> elements as needed-->
+                    <nys-select
+                    width="lg"
+                    label="County"
+                    description="If you live in New York State: Choose the county in which you reside from the drop-down menu."
+                    required
+                    name="county"
+                    >
+                    <nys-option selected value="-- Select One --">
+                    -- Select One --
+                    </nys-option>
+                    <nys-option value="Albany">
+                    Albany
+                    </nys-option>
+                    </nys-select>
+                </div>
+                <div class="nys-padding-200">
+                        <nys-textinput
+                        width="md"
+                        placeholder="_____-____"
+                        pattern="^[0-9]{5}(?:-[0-9]{4})?$"
+                        label="Zip Code"
+                        required
+                        description="If you live in the United States, enter your zip code. +4 not required."
+                        name="zip"
+                        ></nys-textinput>
+                </div>
+                <nys-divider></nys-divider>
+                <div class="nys-padding-x-200">
+                <h3>Alternate/Emergency Contact</h3>
+                </div>
+                <div class="nys-padding-200">
+                        <nys-textinput
+                        width="lg"
+                        label="First Name"
+                        required
+                        description="Enter the first name of a person who the NYSP could contact, if unable to contact you."
+                        name="contactfname"
+                        ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="lg"
+                    label="Last Name"
+                    required
+                    description="Enter the contact's last name."
+                    name="contactlname"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="md"
+                    label="Phone Number"
+                    type="tel"
+                    required
+                    description="Enter the area code and the contact's phone number."
+                    name="contactphone"
+                    ></nys-textinput>
+                    <p>
+                        <strong>Note:</strong>  Alternate / Emergency Contact phone number must be different from your own phone number.
+                    </p>
+                <div class="nys-desktop:nys-grid-col-8 nys-padding-l-1200">
+                    <nys-button
+                    label="Continue"
+                    href="background.html"
+                    fullWidth size="md"
+                    ariaDescription="Continue"
+                    ></nys-button>
+                </div>
+                </div>
+                </div>
                 </div>
             </div>
             </div>
