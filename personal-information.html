@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Full NYS Design System CSS -->
+    <link rel="stylesheet" href="/node_modules/@nysds/styles/dist/nysds-full.min.css" />
+    <!-- NYS Agency Theme-->
+     <link rel="stylesheet" href="/node_modules/@nysds/styles/dist/nysds-theme-safety.min.css" />
+    <title>Step 2: Personal Information | NYSP Application</title>
+  </head>
+  <body>
+    <nys-skipnav id="nys-skipnav" href="#app"></nys-skipnav>
+    <div id="app">
+        <!---NYS UNav Header-->
+        <nys-unavheader hideTranslate hideSearch></nys-unavheader>
+        <!--NYS Global Header-->
+        <nys-globalheader appName="Join the State Police"></nys-globalheader>
+        <div class="nys-grid-row">
+            <nys-stepper
+                label="Register for Design System Office Hours"
+                class="nys-desktop:nys-grid-col-4"
+            >
+                <nys-step
+                href="qualification.html"
+                label="Qualification"
+                ></nys-step>
+                <nys-step
+                href="personal-information.html"
+                label="Personal Information"
+                selected
+                current
+                ></nys-step>
+                <nys-step
+                href="background.html"
+                label="Background"
+                ></nys-step>
+                <nys-step
+                href="military-background.html"
+                label="Military Background"
+                ></nys-step>
+                <nys-step
+                href="review-and-affirmation.html"
+                label="Review and Affirmation"
+                ></nys-step>
+            </nys-stepper>
+            <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content">
+                <div class="nys-padding-200">
+                <h2>Personal Information</h2>
+                <nys-textinput label="Social Security Number" type="number" required width="md"></nys-textinput>
+                <div class="nys-padding-y-200"></div>
+                <nys-textinput label="Re-enter Social Security Number" type="number" required width="md"></nys-textinput>
+                </div>
+            </div>
+            </div>
+
+
+
+
+        <!--NYS Global Footer-->
+        <nys-globalfooter agencyName="Join the State Police"></nys-globalfooter>
+        <!-- NYS UNav Footer-->
+         <nys-unavfooter></nys-unavfooter>
+
+    </div>
+   <!-- NYS Design System Javascript library -->
+    <script src="/node_modules/@nysds/components/dist/nysds.js"></script>
+  </body>
+</html>
