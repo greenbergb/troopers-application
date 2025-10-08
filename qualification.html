@@ -108,6 +108,43 @@
         <strong>Note:</strong> You will automatically be disqualified if you will not be a citizen of the United States on {current date}.
     </p>
 <nys-divider></nys-divider>
+<h3>Criminal Record</h3>
+    <!--
+- Use the same 'name' attribute make radio buttons mutually exclusive
+- Update 'value' attribute to change data submitted to forms
+-->
+<nys-radiogroup
+label="Have you ever been convicted of a felony?"
+size="md"
+required
+name="felony"
+>
+<nys-radiobutton
+label="Yes"
+value="Yes"
+name="felony"
+></nys-radiobutton>
+<nys-radiobutton
+label="No"
+value="No"
+name="felony"
+></nys-radiobutton>
+</nys-radiogroup>
+ <p class="nys-padding-t-200">
+    <strong>Note:</strong>   You will automatically be disqualified if you have ever been convicted of a felony.
+</p>
+</div>
+
+<div class="nys-padding-200">
+                <div class="nys-desktop:nys-grid-col-3 nys-padding-l-1000">
+                    <nys-button
+                    label="Continue"
+                    href="personal-information.html"
+                    fullWidth size="md"
+                    ariaDescription="Continue"
+                    ></nys-button>
+                </div>
+                </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Full NYS Design System CSS -->
+    <link rel="stylesheet" href="/node_modules/@nysds/styles/dist/nysds-full.min.css" />
+    <!-- NYS Agency Theme-->
+     <link rel="stylesheet" href="/node_modules/@nysds/styles/dist/nysds-theme-safety.min.css" />
+    <title>Step 4: Military Background | NYSP Application</title>
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 6px;
+  }
+  </style>
+  </head>
+  <body>
+    <!--Hidden skip-nav component-->
+    <nys-skipnav id="nys-skipnav" href="#app"></nys-skipnav>
+    <div id="app">
+        <!---NYS UNav Header-->
+        <nys-unavheader hideTranslate hideSearch></nys-unavheader>
+        <!--NYS Global Header-->
+        <nys-globalheader homepageLink="//joinstatepolice.ny.gov/" appName="Join the State Police">
+            <ul>
+                <li><a href="//joinstatepolice.ny.gov/process">The Process</a></li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/qualifications">Qualifications</a>
+                </li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/fitness-requirements">Fitness Requirements</a>
+                </li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/military">Military</a>
+                </li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/find-your-recruitment-officer">Recruitment Officers</a>
+                </li>
+            </ul>
+    </nys-globalheader>
+        <!--Content Starts Here-->
+        <div class="nys-grid-row">
+            <nys-stepper
+                label="NYSP Trooper Application"
+                class="nys-desktop:nys-grid-col-2"
+            >
+                <nys-step
+                href="qualification.html"
+                label="Qualification"
+                ></nys-step>
+                <nys-step
+                href="personal-information.html"
+                label="Personal Information"
+                ></nys-step>
+                <nys-step
+                href="background.html"
+                label="Background"
+                ></nys-step>
+                <nys-step
+                href="military-background.html"
+                label="Military Background"
+                current
+                ></nys-step>
+                <nys-step
+                href="review-and-affirmation.html"
+                label="Review and Affirmation"
+                ></nys-step>
+            </nys-stepper>
+            <div class="nys-desktop:nys-grid-col-10" id="nys-stepper-content">
+                <div class="nys-padding-x-200">
+                <h2>Military Background</h2>
+                </div>
+                <div class="nys-padding-x-200">
+                    <nys-divider></nys-divider>
+                </div>
+                <div class="nys-padding-x-200">
+                    <h3>Military Record</h3>
+                </div>
+                <div class="nys-padding-200">
+               <!--
+                - Use the same 'name' attribute make radio buttons mutually exclusive
+                - Update 'value' attribute to change data submitted to forms
+                -->
+                <nys-radiogroup
+                label="Have you ever served in the U.S. Armed Forces on a full-time active duty basis?"
+                description="Indicate whether you have ever served in the U.S. Armed Forces on a full-time active duty basis."
+                size="md"
+                required
+                name="served"
+                >
+                <nys-radiobutton
+                label="Yes"
+                description="If Yes, answer the remaining questions on this page."
+                value="Yes"
+                name="served"
+                ></nys-radiobutton>
+                <nys-radiobutton
+                label="No"
+                description="If No, skip ahead to the Review and Affirmation."
+                value="No"
+                name="served"
+                ></nys-radiobutton>
+                </nys-radiogroup>
+
+                <nys-radiogroup
+                label="Are you currently serving in the military?"
+                description="Indicate whether you are currently on active duty."
+                size="md"
+                required
+                name="currentlyserving"
+                >
+                <nys-radiobutton
+                label="Yes"
+                value="Yes"
+                name="currentlyserving"
+                ></nys-radiobutton>
+                <nys-radiobutton
+                label="No"
+                value="No"
+                name="currentlyserving"
+                ></nys-radiobutton>
+                </nys-radiogroup>
+                </div>
+
+                <div class="nys-padding-x-200">
+                    <nys-divider></nys-divider>
+                </div>
+                <div class="nys-padding-x-200">
+                    <h3>Dates of Service</h3>
+                </div>
+                <div class="nys-padding-200">
+                   <!--
+                    - Replace "name" value with the name of your form field
+                    - Add <nys-option> elements as needed
+                    -->
+                    <nys-select
+                    width="md"
+                    label="Branch"
+                    description="Using the drop-down menu, select the branch in which you served. U.S. Armed Forces includes: Air Force, Army, Coast Guard, Marine Corps, Navy, and the Reserves/National Guard of each branch. Reserves/National Guard qualify only when in the service of the United States under USC Title 10, pursuant to call as provided by law on a full-time active duty basis, other than active duty for training purposes."
+                    required
+                    name="branch"
+                    >
+                    <nys-option value="Air Force">
+                    Air Force
+                    </nys-option>
+                    <nys-option value="Army">
+                    Army
+                    </nys-option>
+                    <nys-option value="Coast Guard">
+                    Coast Guard
+                    </nys-option>
+                    <nys-option value="Marine Corps">
+                    Marine Corps
+                    </nys-option>
+                    <nys-option value="Navy">
+                    Navy
+                    </nys-option>
+                    <nys-option value="Reserves/National Guard">
+                    Reserves/National Guard
+                    </nys-option>
+                    </nys-select>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                    width="md"
+                    label="Date Entered"
+                    required
+                    description="Type in the date you entered military service in mm/dd/yyyy format."
+                    pattern="^(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])/(?:29|30)|(?:0?1)/31)/(?:19|[2-9]\d)\d{2}|02/(?:29)/(?:19|[2-9]\d)(?:(?:00)|(?:[02468][048])|(?:[13579][26]))$"
+                    placeholder="mm/dd/yyyy"
+                    name="dateentered"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-textinput
+                        width="md"
+                        label="Date Discharged (or anticipating)"
+                        required
+                        description="Type in the date that you were or anticipate being discharged from military service in mm/dd/yyyy format."
+                        pattern="^(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])/(?:29|30)|(?:0?1)/31)/(?:19|[2-9]\d)\d{2}|02/(?:29)/(?:19|[2-9]\d)(?:(?:00)|(?:[02468][048])|(?:[13579][26]))$"
+                        placeholder="mm/dd/yyyy"
+                        name="datedischarged"
+                        ></nys-textinput>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-select
+                    width="md"
+                    label="Discharge Type"
+                    description="Select the type of discharge you received or expect to receive from the drop-down menu."
+                    required
+                    name="dischargetype"
+                    >
+                        <nys-option value="Option 1">
+                        Option 1 {REPLACE}
+                        </nys-option>
+                        <nys-option value="Option 2">
+                        Option 2 {REPLACE}
+                        </nys-option>
+                    </nys-select>
+                </div>
+                <div class="nys-padding-x-200">
+                    <p>
+                        <em>Select the Add Entry button to complete the entry for this time of service.</em>
+                    </p>
+                </div>
+                <div class="nys-padding-200">
+                <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
+                <nys-button
+                    label="Add Entry"
+                    fullWidth size="md"
+                    suffixIcon="add"
+                    ariaDescription="Select the Add Entry button to complete the entry for this time of service."
+                    ></nys-button>
+                </div>
+                </div>
+                <div class="nys-padding-200">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Branch
+                                </th>
+                                <th>
+                                    Date Entered
+                                </th>
+                                <th>
+                                    Date Discharged
+                                </th>
+                                <th>
+                                    Discharge Type
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Air Force
+                                </td>
+                                <td>
+                                    01/01/2019
+                                </td>
+                                <td>
+                                    01/01/2023
+                                </td>
+                                <td>
+                                    Honorable
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="nys-padding-200">
+                <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
+                    <nys-button
+                    label="Add Another Branch"
+                    fullWidth size="md"
+                    variant="outline"
+                    suffixIcon = "add"
+                    ariaDescription="Select the Add Another Branch button to repeat the process above and add multiple dates of service."
+                    ></nys-button>
+                </div>
+                </div>
+                <div class="nys-padding-200">
+                    <p>
+                        <strong>Note:</strong> You can enter multiple dates of service by using the add another branch button and repeating the process above.
+                    </p>
+                </div>
+                <nys-divider></nys-divider>
+                <div class="nys-padding-x-200">
+                <h3>Veteran's Preference (VP) Credits</h3>
+                </div>
+                <div class="nys-padding-200">
+                   <!--
+                    1. Update 'name' attribute to group checkbox data
+                    2. Update 'value' attribute to change data sent via forms
+                    -->
+                <nys-checkbox
+                size="md"
+                label="Class 1: I served as a member of the U.S. Armed Forces on full-time active duty, other than for training programs, between August 2, 1990 and the present."
+                description="Required if you are going to claim VP credits"
+                value="Class 1: I served as a member of the U.S. Armed Forces on full-time active duty, other than for training programs, between August 2, 1990 and the present."
+                name="class1veteran"
+                ></nys-checkbox>
+                </div>
+
+                <div class="nys-padding-200">
+                    <nys-radiogroup
+                    label="If you are claiming VP credits, do you qualify as a Disabled Veteran as defined in the note below?"
+                    description="Indicate, by clicking on either the yes or no button, whether you do or do not qualify as a disabled veteran who is currently receiving payments from the U.S. Department of Veterans Affairs for a service-connected disability rated at 10% or more."
+                    size="md"
+                    required
+                    name="disabledveteran"
+                    >
+                    <nys-radiobutton
+                    label="Yes"
+                    value="Yes"
+                    name="disabledveteran"
+                    ></nys-radiobutton>
+                    <nys-radiobutton
+                    label="No"
+                    value="No"
+                    name="disabledveteran"
+                    ></nys-radiobutton>
+                    </nys-radiogroup>
+                </div>
+                <div class="nys-padding-200">
+                    <p>
+                        <strong>Note:</strong> A War-Time or Disabled Veteran may be eligible to have extra credits added to his/her passing score on the Entrance Examination for NYS Trooper. 
+                        To have these extra credits added to your exam score, you must complete this section. These credits can be used only once for any permanent government employment in New York State.
+                        If you do claim the extra credits at this time, you will still have the option of waiving them later.
+                        If you score well enough on the examination to be reached for further processing without the use of the extra credits you may waive the credits at that time 
+                        and reserve them for other New York State government employment or for a New York State Police promotional examination.
+                    </p>
+                </div>
+                
+            <nys-divider></nys-divider>
+                <div class="nys-padding-x-200">
+                <h3>Supporting Military Documentation</h3>
+                </div>
+                <div class="nys-padding-200">
+                    <nys-alert
+                    type="info"
+                    heading=""
+                    >   You are required to submit a copy of your DD-214 or other supporting documentation before we can award your Veteran's Preference credit. 
+                        Supporting documentation must be received prior to regardless of when you are scheduled to take the examination. Documents may be sent electronically, or mailed to:
+                        <address class="nys-padding-y-150">
+                            New York State Police<br />
+                            Attn: Member Hiring Unit<br />
+                            1220 Washington Avenue, Bldg. #22 Albany, NY 12226
+                        </address>
+                    </nys-alert>
+                </div>
+                <div class="nys-padding-200">
+                <h4>Supporting Files</h4>
+                </div>
+
+                <div class="nys-padding-200">
+                <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
+                    <nys-button
+                    label="Continue"
+                    href="review-and-affirmation.html"
+                    fullWidth size="md"
+                    ariaDescription="Continue"
+                    ></nys-button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+  <!--Content Ends Here-->
+
+
+        <!--NYS Global Footer-->
+        <nys-globalfooter
+        agencyName="Join the State Police"
+        homepageLink="//joinstatepolice.ny.gov/">
+      <ul>
+        <li><a href="//joinstatepolice.ny.gov/academy-life">Academy Life</a></li>
+        <li><a href="//joinstatepolice.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="//joinstatepolice.ny.gov/contact-us">Contact Us</a></li>
+        <li><a href="//joinstatepolice.ny.gov/disclaimer">Disclaimer</a></li>
+        <li><a href="//joinstatepolice.ny.gov/internships">Internships</a></li>
+        <li><a href="//joinstatepolice.ny.gov/language-access">Language Access</a></li>
+        <li><a href="//joinstatepolice.ny.gov/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </nys-globalfooter>
+        <!-- NYS UNav Footer-->
+         <nys-unavfooter></nys-unavfooter>
+
+    </div>
+   <!-- NYS Design System Javascript library -->
+    <script src="/node_modules/@nysds/components/dist/nysds.js"></script>
+  </body>
+</html>
