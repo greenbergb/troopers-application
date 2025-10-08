@@ -15,13 +15,6 @@
       href="/node_modules/@nysds/styles/dist/nysds-theme-safety.min.css"
     />
     <title>Step 4: Military Background | NYSP Application</title>
-    <style>
-        table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 6px;
-      }
-    </style>
   </head>
   <body>
     <!--Hidden skip-nav component-->
@@ -69,51 +62,33 @@
           <nys-step
             href="military-background.html"
             label="Military Background"
-            current
           ></nys-step>
           <nys-step
             href="review-and-affirmation.html"
             label="Review and Affirmation"
+            current
           ></nys-step>
         </nys-stepper>
         <div class="nys-desktop:nys-grid-col-10" id="nys-stepper-content">
           <div class="nys-padding-x-200">
-            <h2>Military Background</h2>
+            <h2>Review and Affirmation</h2>
+            <p>
+                Please review and verify all of the information that you have entered. To change any piece of information, use the stepper tool at the top of the page, 
+                you will be brought back to the step that you need to edit.
+            </p>
           </div>
           <div class="nys-padding-x-200">
             <nys-divider></nys-divider>
           </div>
           <div class="nys-padding-x-200">
-            <h3>Military Record</h3>
+            <h3>Personal Information</h3>
           </div>
           <div class="nys-padding-200">
-            <!--
-                - Use the same 'name' attribute make radio buttons mutually exclusive
-                - Update 'value' attribute to change data submitted to forms
-                -->
-            <nys-radiogroup
-              label="Have you ever served in the U.S. Armed Forces on a full-time active duty basis?"
-              description="Indicate whether you have ever served in the U.S. Armed Forces on a full-time active duty basis."
-              size="md"
-              required
-              name="served"
-            >
-              <nys-radiobutton
-                label="Yes"
-                description="If Yes, answer the remaining questions on this page."
-                value="Yes"
-                name="served"
-              ></nys-radiobutton>
-              <nys-radiobutton
-                label="No"
-                description="If No, skip ahead to the Review and Affirmation."
-                value="No"
-                name="served"
-              ></nys-radiobutton>
-            </nys-radiogroup>
+            <div class="nys-grid-row">
+                <div class="nys-grid-col-5">
+                    <strong>Full Name: </strong><div class="nys-label_required">*</div>
+                </div>
             </div>
-
-            <div class="nys-padding-200">
             <nys-radiogroup
               label="Are you currently serving in the military?"
               description="Indicate whether you are currently on active duty."
