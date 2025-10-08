@@ -1,13 +1,144 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <title>Application for New York State Trooper</title>
+    <!-- Core NYSDS styles -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@nysds/styles/dist/nysds-full.min.css"
+    />
+    <!-- Agency theme (Safety) -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@nysds/styles/dist/nysds-theme-safety.min.css"
+    />
     <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>troopers-application</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <!--Hidden skip-nav component-->
+    <nys-skipnav></nys-skipnav>
+
+    <!--NYS Universal Header-->
+    <nys-unavheader hideTranslate hideSearch></nys-unavheader>
+
+    <!--Global Header-->
+    <nys-globalheader homepageLink="//joinstatepolice.ny.gov/" appName="Join the State Police">
+      <ul>
+        <li><a href="//joinstatepolice.ny.gov/process">The Process</a></li>
+        <li>
+          <a href="//joinstatepolice.ny.gov/qualifications">Qualifications</a>
+        </li>
+        <li>
+          <a href="//joinstatepolice.ny.gov/fitness-requirements">Fitness Requirements</a>
+        </li>
+        <li>
+          <a href="//joinstatepolice.ny.gov/military">Military</a>
+        </li>
+        <li>
+          <a href="//joinstatepolice.ny.gov/find-your-recruitment-officer">Recruitment Officers</a>
+        </li>
+      </ul>
+    </nys-globalheader>
+<!--Content Starts Here-->
+    <div class="nys-grid-container">
+        <h2>Apply for the New York State Trooper Exam</h2>
+    <div class="nys-padding-x-400 nys-padding-y-200">
+        <ul>
+          <li>
+            The first step to become a New York State Trooper is your
+            application to take the New York State Trooper Entrance Examination.
+          </li>
+          <li>
+            The examination is administered at Pearson VUE testing centers.
+            After applying you will receive an email from Pearson VUE to
+            schedule your examination, there will be a fee of $44.00 payable to
+            Pearson VUE. Any changes to your exam schedule must be completed
+            through Pearson VUE.
+          </li>
+        </ul>
+      </div>
+  
+        <h3>General Instructions</h3>
+
+
+     <div class="nys-padding-x-400 nys-padding-y-200">
+        <ul>
+          <li>
+            Please refer to Application Instructions with any questions that may
+            arise while completing the application.
+          </li>
+          <li>
+            The NYSP is not responsible for applications that are not properly
+            completed.
+          </li>
+          <li>
+            You will receive a confirmation message at the end of the application process indicating your application was successful. 
+            If you leave the process before receiving this message, all information entered will not be saved and must be re-entered at a later time to apply.
+          </li>
+        </ul>
+      </div>
+
+        <h3>Application Submission</h3>
+
+      <div class="nys-padding-x-400 nys-padding-t-200">
+        <p>
+          When you submit the application, a confirmation will be generated containing your personal information.
+        </p>
+      </div>
+      <div class="nys-padding-x-400">
+        <ol>
+          <li>
+            Be sure to save this confirmation for your records.
+          </li>
+          <li>
+            The NYSP is not responsible for applications that are not properly
+            completed.
+          </li>
+          <li>
+            Once your application is complete you will receive an email from Pearson VUE Testing Centers, within 24 hours, to select your testing site center location, along with the date and time of your test.
+          </li>
+        </ol>
+      </div>
+
+      <div class="nys-grid-col-auto nys-padding-x-1200 nys-margin-r-200 nys-padding-y-150">
+        <nys-button
+          href="step1.html"
+          label="Apply Now"
+          fullWidth size="md"
+          ariaDescription="Apply Now">
+        </nys-button>
+      </div>
+
+      <div class="nys-grid-col-auto nys-padding-x-1200 nys-margin-r-200 nys-padding-y-150">
+        <nys-button
+          label="Update Your Application"
+          fullWidth size="md"
+          ariaDescription="Update Your Application"
+          variant="outline">
+        </nys-button>
+      </div>
+    </div>
+    <!--Content Ends Here-->
+
+    <!--NYS Global Footer-->
+    <nys-globalfooter
+      agencyName="Join the State Police"
+      homepageLink="//joinstatepolice.ny.gov/">
+      <ul>
+        <li><a href="//joinstatepolice.ny.gov/academy-life">Academy Life</a></li>
+        <li><a href="//joinstatepolice.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="//joinstatepolice.ny.gov/contact-us">Contact Us</a></li>
+        <li><a href="//joinstatepolice.ny.gov/disclaimer">Disclaimer</a></li>
+        <li><a href="//joinstatepolice.ny.gov/internships">Internships</a></li>
+        <li><a href="//joinstatepolice.ny.gov/language-access">Language Access</a></li>
+        <li><a href="//joinstatepolice.ny.gov/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </nys-globalfooter>
+
+    <!--NYS UNav Footer-->
+    <nys-unavfooter></nys-unavfooter>
+    <script
+      type="module"
+      src="node_modules/@nysds/components/dist/nysds.js"></script>
   </body>
 </html>

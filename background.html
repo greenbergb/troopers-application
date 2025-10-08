@@ -11,12 +11,30 @@
     <title>Step 3: Background | NYSP Application</title>
   </head>
   <body>
+    <!--Hidden skip-nav component-->
     <nys-skipnav id="nys-skipnav" href="#app"></nys-skipnav>
     <div id="app">
         <!---NYS UNav Header-->
         <nys-unavheader hideTranslate hideSearch></nys-unavheader>
         <!--NYS Global Header-->
-        <nys-globalheader appName="Join the State Police"></nys-globalheader>
+        <nys-globalheader homepageLink="//joinstatepolice.ny.gov/" appName="Join the State Police">
+            <ul>
+                <li><a href="//joinstatepolice.ny.gov/process">The Process</a></li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/qualifications">Qualifications</a>
+                </li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/fitness-requirements">Fitness Requirements</a>
+                </li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/military">Military</a>
+                </li>
+                <li>
+                <a href="//joinstatepolice.ny.gov/find-your-recruitment-officer">Recruitment Officers</a>
+                </li>
+            </ul>
+    </nys-globalheader>
+        <!--Content Starts Here-->
         <div class="nys-grid-row">
             <nys-stepper
                 label="NYSP Trooper Application"
