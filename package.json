@@ -12,7 +12,7 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
-    "@nysds/components": "^1.9.1",
-    "@nysds/styles": "^1.9.1"
+    "@nysds/components": "^1.10.0",
+    "@nysds/styles": "^1.10.0"
   }
 }

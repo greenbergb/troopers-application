@@ -14,7 +14,13 @@
       rel="stylesheet"
       href="/node_modules/@nysds/styles/dist/nysds-theme-safety.min.css"
     />
-    <title>Step 4: Military Background | NYSP Application</title>
+    <!--Load Fonts CSS -->
+     <link rel="stylesheet" href="/assets/fonts/nysds-fonts.css">
+     
+    <!--Preload Critical Fonts-->
+    <link rel="preload" href="/assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <title>Step 5: Review and Affirimation | NYSP Application</title>
   </head>
   <body>
     <!--Hidden skip-nav component-->
@@ -73,7 +79,7 @@
           <div class="nys-padding-x-200">
             <h2>Review and Affirmation</h2>
             <p>
-                Please review and verify all of the information that you have entered. To change any piece of information, use the stepper tool at the top of the page, 
+                Please review and verify all of the information that you have entered. To change any piece of information, use the stepper tool and 
                 you will be brought back to the step that you need to edit.
             </p>
           </div>
@@ -84,36 +90,119 @@
             <h3>Personal Information</h3>
           </div>
           <div class="nys-padding-200">
-            <div class="nys-grid-row">
-                <div class="nys-grid-col-5">
-                    <strong>Full Name: </strong><div class="nys-label_required">*</div>
+            <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Firstname"
+                label="First Name"
+                required
+                description="Your first name"
+                name="firstname"
+                ></nys-textinput>
+               </div>
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                    width="lg"
+                    readonly
+                    value="Middlename"
+                    label="Middle Name"
+                    optional
+                    description="Your middle name"
+                    name="mname"
+                    ></nys-textinput>
+                </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Lasttname"
+                label="Last Name"
+                required
+                description="Your last name"
+                name="lastname"
+                ></nys-textinput>
+            </div>
+            </div>
+            
+            <div class="nys-grid-row nys-grid-gap">
+                <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="lg"
+                    readonly 
+                    value="123 Test Lane"
+                    label="Address"
+                    required
+                    description="Your street address"
+                    name="address"
+                    ></nys-textinput>
+                </div>
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="lg"
+                    readonly 
+                    value="Albany"
+                    label="City"
+                    required
+                    description="Your city"
+                    name="city"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="lg"
+                    readonly 
+                    value="New York"
+                    label="State"
+                    required
+                    description="Your state"
+                    name="state"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="md"
+                    readonly 
+                    value="12345"
+                    label="Zip Code"
+                    required
+                    description="Your zip code"
+                    name="zip"
+                    ></nys-textinput>
                 </div>
             </div>
-            <nys-radiogroup
-              label="Are you currently serving in the military?"
-              description="Indicate whether you are currently on active duty."
-              size="md"
-              required
-              name="currentlyserving"
-            >
-              <nys-radiobutton
-                label="Yes"
-                value="Yes"
-                name="currentlyserving"
-              ></nys-radiobutton>
-              <nys-radiobutton
-                label="No"
-                value="No"
-                name="currentlyserving"
-              ></nys-radiobutton>
-            </nys-radiogroup>
+            <div class="nys-grid-row nys-grid-gap">
+                <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="lg"
+                    readonly 
+                    value="Albany"
+                    label="County"
+                    required
+                    description="Your county"
+                    name="county"
+                    ></nys-textinput>
+                </div>
+                <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="lg"
+                    readonly 
+                    value="United States of America"
+                    label="Country"
+                    required
+                    description="Your country of residence"
+                    name="country"
+                    ></nys-textinput>
+                </div>
+          </div>
           </div>
 
           <div class="nys-padding-x-200">
             <nys-divider></nys-divider>
           </div>
           <div class="nys-padding-x-200">
-            <h3>Dates of Service</h3>
+            <h3>Background Information</h3>
           </div>
           <div class="nys-padding-200">
             <!--
