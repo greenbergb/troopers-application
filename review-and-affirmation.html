@@ -106,7 +106,7 @@
                 value="Firstname"
                 label="First Name"
                 required
-                description="Your first name"
+                description=""
                 name="firstname"
                 ></nys-textinput>
                </div>
@@ -117,7 +117,7 @@
                     value="Middlename"
                     label="Middle Name"
                     optional
-                    description="Your middle name"
+                    description=""
                     name="mname"
                     ></nys-textinput>
                 </div>
@@ -128,7 +128,7 @@
                 value="Lasttname"
                 label="Last Name"
                 required
-                description="Your last name"
+                description=""
                 name="lastname"
                 ></nys-textinput>
             </div>
@@ -142,7 +142,7 @@
                     value="123 Test Lane"
                     label="Address"
                     required
-                    description="Your street address"
+                    description=""
                     name="address"
                     ></nys-textinput>
                 </div>
@@ -153,7 +153,7 @@
                     value="Albany"
                     label="City"
                     required
-                    description="Your city"
+                    description=""
                     name="city"
                     ></nys-textinput>
                 </div>
@@ -164,7 +164,7 @@
                     value="New York"
                     label="State"
                     required
-                    description="Your state"
+                    description=""
                     name="state"
                     ></nys-textinput>
                 </div>
@@ -175,7 +175,7 @@
                     value="12345"
                     label="Zip Code"
                     required
-                    description="Your zip code"
+                    description=""
                     name="zip"
                     ></nys-textinput>
                 </div>
@@ -188,7 +188,7 @@
                     value="Albany"
                     label="County"
                     required
-                    description="Your county"
+                    description=""
                     name="county"
                     ></nys-textinput>
                 </div>
@@ -197,9 +197,9 @@
                     width="lg"
                     readonly 
                     value="United States of America"
-                    label="Country"
+                    label="Country of Residence"
                     required
-                    description="Your country of residence"
+                    description=""
                     name="country"
                     ></nys-textinput>
                 </div>
@@ -213,7 +213,7 @@
                 label="Home Phone"
                 type="tel"
                 optional
-                description="Your area code and number for your home phone"
+                description=""
                 name="homephone"
                 ></nys-textinput>
             </div>
@@ -225,7 +225,7 @@
                 label="Work Phone"
                 type="tel"
                 optional
-                description="Your area code and number for your work phone"
+                description=""
                 name="workphone"
                 ></nys-textinput>
             </div>
@@ -237,7 +237,7 @@
                     label="Cell Phone"
                     type="tel"
                     required
-                    description="Your area code and number for your cell phone."
+                    description=""
                     name="cellphone"
                 ></nys-textinput>
             </div>
@@ -249,7 +249,7 @@
                     label="E-mail"
                     type="email"
                     required
-                    description="Your E-mail address"
+                    description=""
                     name="email"
                     ></nys-textinput>
             </div>
@@ -262,7 +262,7 @@
                     value="Jan 1, 2002"
                     label="Date of Birth"
                     required
-                    description="(mm/dd/yyyy)"
+                    description=""
                     name="Date of Birth"
                 ></nys-textinput>
             </div>
@@ -273,7 +273,7 @@
                     value="United States of America"
                     label="Country of Birth"
                     required
-                    description="Your country of birth"
+                    description=""
                     name="countryborn"
                     ></nys-textinput>
             </div>
@@ -284,7 +284,7 @@
                     value="Yes"
                     label="U.S. Citizen"
                     required
-                    description="Are you a U.S. Citizen?"
+                    description=""
                     name="citizen"
                     ></nys-textinput>
             </div>
@@ -295,7 +295,7 @@
                     value="No"
                     label="Felony conviction"
                     required
-                    description="Do you have a felony conviction?"
+                    description=""
                     name="felony"
                     ></nys-textinput>
             </div>
@@ -311,7 +311,7 @@
                 value="Testing"
                 label="First Name"
                 required
-                description="Your contact's first name"
+                description=""
                 name="contactfname"
                 ></nys-textinput>
                </div>
@@ -322,7 +322,7 @@
                 value="Test"
                 label="Last Name"
                 required
-                description="Your contact's last name"
+                description=""
                 name="contactlname"
                 ></nys-textinput>
             </div>
@@ -336,8 +336,8 @@
                 label="Phone"
                 type="tel"
                 required
-                description="Your area code and number for your contact's phone"
-                name="homephone"
+                description=""
+                name="contactphone"
                 ></nys-textinput>
             </div>
             </div>
@@ -465,14 +465,39 @@
                 name="currentlyserving"
                 ></nys-textinput>
                </div>
+
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly 
+                value="0"
+                label="Veteran's Credits"
+                required
+                description=""
+                name="veteranscredits"
+                ></nys-textinput>
+               </div>
+
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly 
+                value="No"
+                label="Disabled Veteran"
+                required
+                description=""
+                name="disabledveteran"
+                ></nys-textinput>
+               </div>
                
             </div>
+            
             <div class="nys-grid-row">
-            <div class="nys-padding-200">
+            <div class="nys-padding-y-200">
                 
             <table> 
               <thead>
-                <caption>Service Record </caption>
+                <caption><nys-label label="Service Record" flag="required"></nys-label></caption>
                 <tr>
                   <th>Branch</th>
                   <th>Date Entered</th>
@@ -488,35 +513,67 @@
               </thead>
             </table>
           </div>
+        </div>
+
+        <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="None"
+                label="Supporting Documents"
+                required
+                description=""
+                name="supportingdocuments"
+                ></nys-textinput>
+        </div>
+               </div>
+          <div class="nys-padding-x-200">
+            <nys-divider></nys-divider>
           </div>
-          <div class="nys-grid-row nys-grid-gap">
-               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
-                <nys-textinput
-                width="md"
-                readonly 
-                value="10"
-                label="Veteran's Credits"
-                required
-                description=""
-                name="veteranscredits"
-                ></nys-textinput>
-               </div>
+          <div class="nys-padding-x-200">
+            <h3>Affirmation</h3>
+          </div>
 
-               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
-                <nys-textinput
-                width="md"
-                readonly 
-                value="Yes"
-                label="Disabled Veteran"
-                required
-                description=""
-                name="disabedveteran"
-                ></nys-textinput>
-               </div>
-               
-            </div>
-
-
+          <div class="nys-grid-row">
+            <div class="nys-padding-x-200">
+            <nys-checkboxgroup
+            label="By submitting this application, I fully understand that:"
+            size="md"
+            required
+            name="affirmation"
+            >
+            <nys-checkbox
+            label="Should I make a false statement of any material fact or practice, or attempt to practice any deception or fraud in my application, examination or any of the procedures 
+            connected with my possible appointment to a position with the New York State Police, I will not be appointed or further considered for appointment."
+            required
+            value="false-statement"
+            name="affirmation"
+            ></nys-checkbox>
+            <nys-checkbox
+            label="All information provided by me will be verified by a polygraph examination and complete background investigation."
+            required
+            value="verified"
+            name="affirmation"
+            ></nys-checkbox>
+            <nys-checkbox
+            label="If I am appointed to a position with the New York State Police and, if then or thereafter, facts become known which if previously known would have warranted my not being appointed, 
+            or if then or thereafter there is found any illegality or fraud in my application, examination or in any of the procedures connected with my appointment, such appointment may be revoked."
+            required
+            value="if-appointed"
+            name="affirmation"
+            ></nys-checkbox>
+            <nys-checkbox
+            label="There is a $44.00 testing fee collected by Pearson VUE Testing Centers when I select the time, date, and location of my examination. 
+            I understand this fee may be refundable if I cancel within 72 hours of my scheduled examination. 
+            I further understand that I will receive a link from Pearson VUE within 1-2 business days of completing my application with the New York State Police."
+            required
+            value="testing-fee"
+            name="affirmation"
+            ></nys-checkbox>
+            </nys-checkboxgroup>
+</div>
+          </div>
                <div class="nys-padding-200">
             <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
               <nys-button
@@ -529,12 +586,13 @@
             </div>
           </div> 
           </div>
-
+          
         </div>
       </div>
 
       <!--Content Ends Here-->
-
+      <nys-backtotop></nys-backtotop>
+      <footer>
       <!--NYS Global Footer-->
       <nys-globalfooter
         agencyName="Join the State Police"
@@ -565,6 +623,7 @@
       <!-- NYS UNav Footer-->
       <nys-unavfooter></nys-unavfooter>
     </div>
+    </footer>
     <!-- NYS Design System Javascript library -->
     <script src="/node_modules/@nysds/components/dist/nysds.js"></script>
   </body>

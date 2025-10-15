@@ -107,8 +107,8 @@
           </li>
         </ol>
       </div>
-
-      <div class="nys-grid-col-auto nys-padding-x-1200 nys-margin-r-200 nys-padding-y-150">
+<div class="nys-grid-row nys-grid-gap">
+      <div class="nys-desktop:nys-grid-col-6 nys-padding-y-150">
         <nys-button
           href="qualification.html"
           label="Apply Now"
@@ -117,7 +117,7 @@
         </nys-button>
       </div>
 
-      <div class="nys-grid-col-auto nys-padding-x-1200 nys-margin-r-200 nys-padding-y-150">
+      <div class="nys-desktop:nys-grid-col-6 nys-padding-y-150">
         <nys-button
           label="Update Your Application"
           fullWidth size="md"
@@ -125,9 +125,11 @@
           variant="outline">
         </nys-button>
       </div>
+      </div>
     </div>
     <!--Content Ends Here-->
-
+    <nys-backtotop></nys-backtotop>
+     <footer>
     <!--NYS Global Footer-->
     <nys-globalfooter
       agencyName="Join the State Police"
@@ -145,6 +147,9 @@
 
     <!--NYS UNav Footer-->
     <nys-unavfooter></nys-unavfooter>
+
+    </footer>
+    <!-- NYS Design System Javascript library -->
     <script
       type="module"
       src="node_modules/@nysds/components/dist/nysds.js"></script>
