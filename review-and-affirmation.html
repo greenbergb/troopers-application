@@ -20,6 +20,14 @@
     <!--Preload Critical Fonts-->
     <link rel="preload" href="/assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 6px;
+      }
+    </style>
+
     <title>Step 5: Review and Affirimation | NYSP Application</title>
   </head>
   <body>
@@ -241,7 +249,7 @@
                     label="E-mail"
                     type="email"
                     required
-                    description="Your E-mail address."
+                    description="Your E-mail address"
                     name="email"
                     ></nys-textinput>
             </div>
@@ -269,8 +277,71 @@
                     name="countryborn"
                     ></nys-textinput>
             </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="sm"
+                    readonly 
+                    value="Yes"
+                    label="U.S. Citizen"
+                    required
+                    description="Are you a U.S. Citizen?"
+                    name="citizen"
+                    ></nys-textinput>
+            </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                    <nys-textinput
+                    width="sm"
+                    readonly 
+                    value="No"
+                    label="Felony conviction"
+                    required
+                    description="Do you have a felony conviction?"
+                    name="felony"
+                    ></nys-textinput>
+            </div>
           </div>
-          
+          <div class="nys-grid-row nys-grid-gap">
+            <h4>Alternate/Emergency Contact</h4>
+          </div>
+          <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Testing"
+                label="First Name"
+                required
+                description="Your contact's first name"
+                name="contactfname"
+                ></nys-textinput>
+               </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Test"
+                label="Last Name"
+                required
+                description="Your contact's last name"
+                name="contactlname"
+                ></nys-textinput>
+            </div>
+            </div>
+            <div class="nys-grid-row nys-grid-gap">
+                <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly
+                value="(123) 789-0123"
+                label="Phone"
+                type="tel"
+                required
+                description="Your area code and number for your contact's phone"
+                name="homephone"
+                ></nys-textinput>
+            </div>
+            </div>
+
           </div>
 
           <div class="nys-padding-x-200">
@@ -280,83 +351,128 @@
             <h3>Background Information</h3>
           </div>
           <div class="nys-padding-200">
-            <!--
-                    - Replace "name" value with the name of your form field
-                    - Add <nys-option> elements as needed
-                    -->
-            <nys-select
-              width="md"
-              label="Branch"
-              description="Using the drop-down menu, select the branch in which you served. U.S. Armed Forces includes: Air Force, Army, Coast Guard, Marine Corps, Navy, and the Reserves/National Guard of each branch. Reserves/National Guard qualify only when in the service of the United States under USC Title 10, pursuant to call as provided by law on a full-time active duty basis, other than active duty for training purposes."
-              required
-              name="branch"
-            >
-              <nys-option value="Air Force"> Air Force </nys-option>
-              <nys-option value="Army"> Army </nys-option>
-              <nys-option value="Coast Guard"> Coast Guard </nys-option>
-              <nys-option value="Marine Corps"> Marine Corps </nys-option>
-              <nys-option value="Navy"> Navy </nys-option>
-              <nys-option value="Reserves/National Guard">
-                Reserves/National Guard
-              </nys-option>
-            </nys-select>
-          </div>
-          <div class="nys-padding-200">
-            <nys-textinput
-              width="md"
-              label="Date Entered"
-              required
-              description="Type in the date you entered military service in mm/dd/yyyy format."
-              pattern="^(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])/(?:29|30)|(?:0?1)/31)/(?:19|[2-9]\d)\d{2}|02/(?:29)/(?:19|[2-9]\d)(?:(?:00)|(?:[02468][048])|(?:[13579][26]))$"
-              placeholder="mm/dd/yyyy"
-              name="dateentered"
-            ></nys-textinput>
-          </div>
-          <div class="nys-padding-200">
-            <nys-textinput
-              width="md"
-              label="Date Discharged (or anticipating)"
-              required
-              description="Type in the date that you were or anticipate being discharged from military service in mm/dd/yyyy format."
-              pattern="^(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])/(?:29|30)|(?:0?1)/31)/(?:19|[2-9]\d)\d{2}|02/(?:29)/(?:19|[2-9]\d)(?:(?:00)|(?:[02468][048])|(?:[13579][26]))$"
-              placeholder="mm/dd/yyyy"
-              name="datedischarged"
-            ></nys-textinput>
-          </div>
-          <div class="nys-padding-200">
-            <nys-select
-              width="md"
-              label="Discharge Type"
-              description="Select the type of discharge you received or expect to receive from the drop-down menu."
-              required
-              name="dischargetype"
-            >
-              <nys-option value="Option 1"> Option 1 {REPLACE} </nys-option>
-              <nys-option value="Option 2"> Option 2 {REPLACE} </nys-option>
-            </nys-select>
+              <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Choose not to disclose"
+                label="Ethnicity"
+                optional
+                description="Your ethnicity"
+                name="ethnicity"
+                ></nys-textinput>
+               </div>
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                    width="lg"
+                    readonly
+                    value="White"
+                    label="Race"
+                    optional
+                    description="Your race"
+                    name="race"
+                    ></nys-textinput>
+                </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Male"
+                label="Gender"
+                required
+                description="Your gender"
+                name="gender"
+                ></nys-textinput>
+            </div>
+            </div>  
+
+            <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Other"
+                label="Prior NYSP application"
+                required
+                description=""
+                name="applied"
+                ></nys-textinput>
+               </div>
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                    width="sm"
+                    readonly
+                    value="No"
+                    label="Police Training"
+                    required
+                    description=""
+                    name="basictraining"
+                    ></nys-textinput>
+                </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="Other"
+                label="Recruitment Source"
+                required
+                description=""
+                name="firstlearn"
+                ></nys-textinput>
+            </div>
+            <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="lg"
+                readonly 
+                value="statejobs.ny.gov"
+                label="Description"
+                required
+                description=""
+                name="firstlearnother"
+                ></nys-textinput>
+            </div>
+            </div>
+            </div>
+
+             <div class="nys-padding-x-200">
+            <nys-divider></nys-divider>
           </div>
           <div class="nys-padding-x-200">
-            <p>
-              <em
-                >Select the Add Entry button to complete the entry for this time
-                of service.</em
-              >
-            </p>
+            <h3>Military Information</h3>
           </div>
           <div class="nys-padding-200">
-            <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
-              <nys-button
-                label="Add Entry"
-                fullWidth
-                size="md"
-                suffixIcon="add"
-                ariaDescription="Select the Add Entry button to complete the entry for this time of service."
-              ></nys-button>
+              <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly 
+                value="Yes"
+                label="Has Served"
+                optional
+                description=""
+                name="served"
+                ></nys-textinput>
+               </div>
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly 
+                value="No"
+                label="Currently Serving"
+                optional
+                description=""
+                name="currentlyserving"
+                ></nys-textinput>
+               </div>
+               
             </div>
-          </div>
-          <div class="nys-padding-200">
-            <table>
+            <div class="nys-grid-row">
+            <div class="nys-padding-200">
+                
+            <table> 
               <thead>
+                <caption>Service Record </caption>
                 <tr>
                   <th>Branch</th>
                   <th>Date Entered</th>
@@ -372,140 +488,48 @@
               </thead>
             </table>
           </div>
-          <div class="nys-padding-200">
-            <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
-              <nys-button
-                label="Add Another Branch"
-                fullWidth
-                size="md"
-                variant="outline"
-                suffixIcon="add"
-                ariaDescription="Select the Add Another Branch button to repeat the process above and add multiple dates of service."
-              ></nys-button>
-            </div>
           </div>
-          <div class="nys-padding-200">
-            <p>
-              <strong>Note:</strong> You can enter multiple dates of service by
-              using the add another branch button and repeating the process
-              above.
-            </p>
-          </div>
-          <nys-divider></nys-divider>
-          <div class="nys-padding-x-200">
-            <h3>Veteran's Preference (VP) Credits</h3>
-          </div>
-          <div class="nys-padding-200">
-            <!--
-                    1. Update 'name' attribute to group checkbox data
-                    2. Update 'value' attribute to change data sent via forms
-                    -->
-            <nys-checkbox
-              size="md"
-              label="Class 1: I served as a member of the U.S. Armed Forces on full-time active duty, other than for training programs, between August 2, 1990 and the present."
-              description="Required if you are going to claim VP credits"
-              value="Class 1: I served as a member of the U.S. Armed Forces on full-time active duty, other than for training programs, between August 2, 1990 and the present."
-              name="class1veteran"
-            ></nys-checkbox>
-          </div>
+          <div class="nys-grid-row nys-grid-gap">
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly 
+                value="10"
+                label="Veteran's Credits"
+                required
+                description=""
+                name="veteranscredits"
+                ></nys-textinput>
+               </div>
 
-          <div class="nys-padding-200">
-            <nys-radiogroup
-              label="If you are claiming VP credits, do you qualify as a Disabled Veteran as defined in the note below?"
-              description="Indicate, by clicking on either the yes or no button, whether you do or do not qualify as a disabled veteran who is currently receiving payments from the U.S. Department of Veterans Affairs for a service-connected disability rated at 10% or more."
-              size="md"
-              required
-              name="disabledveteran"
-            >
-              <nys-radiobutton
-                label="Yes"
+               <div class="nys-padding-y-150 nys-tablet:nys-grid-col-auto">
+                <nys-textinput
+                width="md"
+                readonly 
                 value="Yes"
-                name="disabledveteran"
-              ></nys-radiobutton>
-              <nys-radiobutton
-                label="No"
-                value="No"
-                name="disabledveteran"
-              ></nys-radiobutton>
-            </nys-radiogroup>
-          </div>
-          <div class="nys-padding-200">
-            <p>
-              <strong>Note:</strong> A War-Time or Disabled Veteran may be
-              eligible to have extra credits added to his/her passing score on
-              the Entrance Examination for NYS Trooper. To have these extra
-              credits added to your exam score, you must complete this section.
-              These credits can be used only once for any permanent government
-              employment in New York State. If you do claim the extra credits at
-              this time, you will still have the option of waiving them later.
-              If you score well enough on the examination to be reached for
-              further processing without the use of the extra credits you may
-              waive the credits at that time and reserve them for other New York
-              State government employment or for a New York State Police
-              promotional examination.
-            </p>
-          </div>
+                label="Disabled Veteran"
+                required
+                description=""
+                name="disabedveteran"
+                ></nys-textinput>
+               </div>
+               
+            </div>
 
-          <nys-divider></nys-divider>
-          <div class="nys-padding-x-200">
-            <h3>Supporting Military Documentation</h3>
-          </div>
-          <div class="nys-padding-200">
-            <nys-alert type="info">
-              You are required to submit a copy of your DD-214 or other
-              supporting documentation before we can award your Veteran's
-              Preference credit. Supporting documentation must be received prior
-              to regardless of when you are scheduled to take the examination.
-              Documents may be sent electronically, or mailed to:
-              <address class="nys-padding-y-150">
-                New York State Police<br />
-                Attn: Member Hiring Unit<br />
-                1220 Washington Avenue, Bldg. #22 Albany, NY 12226
-              </address>
-            </nys-alert>
-          </div>
-          <div class="nys-padding-200">
-            <h4>Supporting Files</h4>
-          </div>
-          <div class="nys-padding-200">
-            <p>
-              If you have your Military Service and/or Disability papers in PDF
-              or Image (.jpg, .png) format, upload them here.
-            </p>
-          </div>
-          <div class="nys-padding-200">
-            <nys-fileinput
-              width="lg"
-              label="Military Service"
-              description="Please select and upload your military service file"
-              name="militaryservicefile"
-            ></nys-fileinput>
-          </div>
 
-          <div class="nys-padding-200">
-            <nys-fileinput
-              width="full"
-              label="Disability"
-              description="Please select and upload your military disability file"
-              name="militarydisabilityfile"
-            ></nys-fileinput>
-          </div>
-
-          <div class="nys-padding-200">
-            <p>Please verify uploaded file(s) are listed correctly.</p>
-          </div>
-
-          <div class="nys-padding-200">
+               <div class="nys-padding-200">
             <div class="nys-desktop:nys-grid-col-2 nys-padding-l-1000">
               <nys-button
-                label="Continue"
-                href="review-and-affirmation.html"
+                label="Submit Application"
+                href="index.html"
                 fullWidth
                 size="md"
-                ariaDescription="Continue"
+                ariaDescription="Submit Application"
               ></nys-button>
             </div>
+          </div> 
           </div>
+
         </div>
       </div>
 
